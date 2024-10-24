@@ -4,6 +4,10 @@ body {
 }
 
 h1 {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Press Start 2P';
     text-align: center;
+}
+
+p {
+    font-family: 'Silkscreen';
 }
