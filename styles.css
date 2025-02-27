@@ -1,4 +1,3 @@
-/* Body Styling */
 body {
     /*background-image: url('path-to-your-gif.gif');*/
     background-size: cover;
@@ -8,10 +7,11 @@ body {
     color: #5d5dff;
     font-family: 'Press Start 2P', cursive;
     margin: 0;
-    padding: 0;
+    padding: 5px;
+    /*white-space: wrap;*/
 }
 
-/* Main Game Container */
+
 .game-container {
     width: 100%;
     height: 100%;
@@ -24,7 +24,6 @@ body {
     padding-top: 20px;
 }
 
-/* Header Styling */
 header h1 {
     font-family: 'Press Start 2P', cursive;
     font-size: 3rem;
@@ -38,7 +37,6 @@ header .intro {
     color: #9648d6;
 }
 
-/* About Section */
 #about {
     background-color: #F0F0FF;
     padding: 20px;
@@ -52,7 +50,6 @@ header .intro {
     font-size: 2rem;
 }
 
-/* Skills Section */
 #skills {
     background-color: #F0F0FF;
     padding: 20px;
@@ -71,7 +68,6 @@ header .intro {
     font-size: 1.2rem;
 }
 
-/* Projects Section */
 #projects {
     background-color: #F0F0FF;
     padding: 20px;
@@ -95,14 +91,12 @@ header .intro {
     font-weight: bold;
 }
 
-/* Hover Effect on Links */
 a:hover {
     color: #9648d6 !important;
     transition: color 0.3s ease;
 }
 
 
-/* Contact Section */
 #contact {
     background-color: #F0F0FF;
     padding: 20px;
@@ -117,23 +111,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Footer Styling */
-footer {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    font-family: 'Silkscreen', sans-serif;
-    font-size: 1rem;
-    color: #8b56b6;
-}
-
-/* Add a border and padding to footer for distinction */
-footer p {
-    padding: 10px;
-    border-top: 2px solid #8b56b6;
-}
-
-/* Add a border and padding to sections for distinction */
 section {
     background: #F0F0FF;
     border-radius: 10px;
@@ -141,7 +118,6 @@ section {
     margin: 15px;
 }
 
-/* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2.5rem;
@@ -154,6 +130,9 @@ section {
     #about, #skills, #projects, #contact {
         margin: 10px;
     }
+    p {
+        white-space: wrap;
+    }
 }
 
 li {
@@ -161,21 +140,48 @@ li {
 }
 
 nav {
-    background-color: #8b56b6;
-    padding: 10px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    background: #8B56B6;
+    border: 4px solid #5D5DFF;
+    flex-wrap: wrap;
 }
 
-nav a {
+.pixel-button {
     font-family: 'Press Start 2P', cursive;
-    color: white;
+    background-color: #E6E6FA;
+    color: #5D5DFF;
+    padding: 10px 15px;
+    border: 4px solid #5D5DFF;
     text-decoration: none;
-    margin: 10px;
-    padding: 10px;
-    display: inline-block;
-    transition: color 0.3s;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 6px #4b4b86;
+    transition: all 0.1s ease-in-out;
+    white-space: nowrap;
 }
 
-nav a:hover {
-    color: yellow;
+.pixel-button:hover {
+    background-color: #8181ff;
+    color: #E6E6FA;
+    box-shadow: 2px 2px 4px #4b4b86;
+    transform: translate(2px, 2px);
+}
+
+.pixel-button:active {
+    box-shadow: 0px 0px 0px #4b4b86;
+    transform: translate(4px, 4px);
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pixel-button {
+        width: 80%;
+        text-align: center;
+    }
 }
