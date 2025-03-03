@@ -181,7 +181,12 @@ nav {
     background-color: #4B4B86;
 }
 
+.night-mode nav {
+    background-color: #572b7a;
+    border-color: #A3A3FF;
+}
+
 /* Additional smooth fade effect */
-.transition-mode body, section, .pixel-button, .pixel-button:hover {
+.transition-mode body, section, .pixel-button, .pixel-button:hover, nav {
     transition: background-color 2s ease, color 2s ease, border-color 2s ease;
 }
