@@ -153,3 +153,24 @@ nav {
         white-space: normal;
     }
 }
+
+/* Night Mode */
+.night-mode {
+    background-color: #1A1A2E;
+    color: #A3A3FF;
+}
+
+.night-mode a {
+    color: #A3A3FF;
+}
+
+.night-mode .pixel-button {
+    background-color: #2E2E5E;
+    color: #A3A3FF;
+    border-color: #A3A3FF;
+}
+
+.night-mode .pixel-button:hover {
+    background-color: #3E3E7E;
+    color: #E6E6FA;
+}
