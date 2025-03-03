@@ -9,6 +9,8 @@ body {
     font-family: 'Press Start 2P', cursive;
     margin: 0;
     padding: 5px;
+    transition: background-color 2s ease-in-out, color 2s ease-in-out;
+
 }
 
 /* Main Container */
@@ -177,4 +179,9 @@ nav {
 
 .night-mode section {
     background-color: #4B4B86;
+}
+
+/* Additional smooth fade effect */
+.transition-mode body, section, .pixel-button, .pixel-button:hover {
+    transition: background-color 2s ease, color 2s ease, border-color 2s ease;
 }
