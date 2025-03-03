@@ -165,12 +165,16 @@ nav {
 }
 
 .night-mode .pixel-button {
-    background-color: #2E2E5E;
+    background-color: #1A1A2E;
     color: #A3A3FF;
     border-color: #A3A3FF;
 }
 
 .night-mode .pixel-button:hover {
-    background-color: #3E3E7E;
+    background-color: #2E2E5E;
     color: #E6E6FA;
+}
+
+.night-mode section {
+    background-color: #4B4B86;
 }
