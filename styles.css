@@ -190,3 +190,72 @@ nav {
 .transition-mode body, section, .pixel-button, nav {
     transition: background-color 2s ease, color 2s ease, border-color 2s ease;
 }
+
+
+
+/* Cloud Container */
+.cloud-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* Cloud Styling */
+.cloud {
+    position: absolute;
+    width: 150px; /* Adjust size as needed */
+    opacity: 0.8;
+    animation: moveClouds 30s linear infinite;
+}
+
+/* Position each cloud differently */
+.cloud1 {
+    top: 10%;
+    left: -200px;
+    animation-duration: 25s;
+}
+
+.cloud2 {
+    top: 50%;
+    left: -250px;
+    animation-duration: 35s;
+}
+
+.cloud3 {
+    top: 80%;
+    left: -300px;
+    animation-duration: 40s;
+}
+
+/* Position each cloud differently */
+.cloud4 {
+    top: 20%;
+    left: -600px;
+    animation-duration: 25s;
+}
+
+.cloud5 {
+    top: 65%;
+    left: -850px;
+    animation-duration: 35s;
+}
+
+.cloud6 {
+    top: 70%;
+    left: 300px;
+    animation-duration: 40s;
+}
+
+/* Cloud Animation */
+@keyframes moveClouds {
+    from {
+        transform: translateX(-200px);
+    }
+    to {
+        transform: translateX(100vw);
+    }
+}
