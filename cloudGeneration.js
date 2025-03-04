@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         cloudContainer.appendChild(cloud);
 
         // Remove the cloud after animation ends
-        setTimeout(() => cloud.remove(), 60000);
+        setTimeout(() => cloud.remove(), 60000 + cloud.style.animation);
     }
 
     setInterval(createCloud, 3000); // Generate a cloud every 5 seconds
