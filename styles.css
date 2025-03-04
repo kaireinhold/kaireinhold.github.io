@@ -206,13 +206,13 @@ nav {
     color: #a2a2fd;
 }
 
-.night-mode .pixel-button, #mode-toggle {
+.night-mode .pixel-button, .night-mode #mode-toggle {
     background-color: #17173e;
     color: #a2a2fd;
     border-color: #a2a2fd;
 }
 
-.night-mode .pixel-button:hover, #mode-toggle:hover {
+.night-mode .pixel-button:hover, .night-mode #mode-toggle:hover {
     background-color: #17173e;
     color: #c4c4fc;
 }
