@@ -143,6 +143,34 @@ nav {
     transform: translate(4px, 4px);
 }
 
+/* Night Mode Toggle Button */
+#mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #E6E6FA;
+    color: #5D5DFF;
+    border: 4px solid #5D5DFF;
+    font-family: 'Press Start 2P', cursive;
+    box-shadow: 4px 4px 6px #4B4B86;
+    z-index: 1000; /* Make sure it stays above other elements */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#mode-toggle:hover {
+    background-color: #8181FF;
+    color: #E6E6FA;
+    box-shadow: 2px 2px 4px #4B4B86;
+}
+
+#mode-toggle:active {
+    box-shadow: none;
+    transform: translate(2px, 2px);
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
@@ -281,31 +309,4 @@ nav {
     position: absolute;
     top: 50px; /* Adjust as needed */
     animation: moveClouds 20s linear infinite;
-}
-
-/* Night Mode Toggle Button */
-#mode-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px;
-    background-color: #E6E6FA;
-    color: #5D5DFF;
-    border: 4px solid #5D5DFF;
-    font-family: 'Press Start 2P', cursive;
-    box-shadow: 4px 4px 6px #4B4B86;
-    z-index: 1000; /* Make sure it stays above other elements */
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-#mode-toggle:hover {
-    background-color: #8181FF;
-    color: #E6E6FA;
-    box-shadow: 2px 2px 4px #4B4B86;
-}
-
-#mode-toggle:active {
-    box-shadow: none;
-    transform: translate(2px, 2px);
 }
