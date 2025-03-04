@@ -244,12 +244,6 @@ nav {
     animation-duration: 35s;
 }
 
-.cloud6 {
-    top: 70%;
-    left: 300px;
-    animation-duration: 40s;
-}
-
 /* Cloud Animation */
 @keyframes moveClouds {
     from {

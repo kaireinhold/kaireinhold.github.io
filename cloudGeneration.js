@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function createCloud() {
         const cloud = document.createElement("img");
-        cloud.src = `Images/cloud${Math.floor(Math.random() * 3) + 1}.png`;
+        cloud.src = `Images/cloud_${Math.floor(Math.random() * 4) + 1}.png`;
         cloud.classList.add("cloud");
 
         // Randomize size and position
