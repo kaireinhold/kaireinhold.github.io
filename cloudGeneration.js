@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function createCloud() {
         const cloud = document.createElement("img");
-        cloud.src = `Images/cloud_${Math.floor(Math.random() * 4) + 1}.png`;
+        cloud.src = `Images/cloud_${Math.floor(Math.random() * 5)}.png`;
         cloud.classList.add("cloud");
 
         // Randomize size and position
@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
         cloudContainer.appendChild(cloud);
 
         // Remove the cloud after animation ends
-        setTimeout(() => cloud.remove(), 40000);
+        setTimeout(() => cloud.remove(), 60000);
     }
 
-    setInterval(createCloud, 5000); // Generate a cloud every 5 seconds
+    setInterval(createCloud, 3000); // Generate a cloud every 5 seconds
 });

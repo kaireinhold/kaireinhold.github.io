@@ -1,16 +1,17 @@
 /* General Styles */
 body {
-    background-color: #E6E6FA;
+    background-color: #6f6fff;
     /* background-image: url('path-to-your-gif.gif'); */
     background-size: cover;
     background-position: center;
     background-repeat: repeat;
-    color: #5D5DFF;
+    color: #2c2c78;
     font-family: 'Press Start 2P', cursive;
     margin: 0;
     padding: 5px;
     transition: background-color 2s ease-in-out, color 2s ease-in-out;
-
+    z-index: 10;
+    position: relative;
 }
 
 /* Main Container */
@@ -30,22 +31,26 @@ header h1 {
     font-size: 3rem;
     color: #8B56B6;
     margin-bottom: 10px;
+
 }
 
 header .intro {
     font-family: 'Silkscreen', sans-serif;
     font-size: 1.2rem;
-    color: #9648D6;
+    color: #8b56b6;
+    z-index: 10;
+    position: relative;
 }
 
 /* Sections */
 section {
-    background: #F0F0FF;
+    background: #a2a2fd;
     border-radius: 10px;
     padding: 20px;
     margin: 15px;
     width: 80%;
     max-width: 900px;
+    opacity: 0.7;
 }
 
 /* Shared Section Headers */
@@ -85,7 +90,7 @@ a {
 }
 
 a:hover {
-    color: #9648D6 !important;
+    color: #8b56b6 !important;
     transition: color 0.3s ease;
 }
 
@@ -100,9 +105,12 @@ nav {
     justify-content: center;
     gap: 10px;
     padding: 20px;
-    background: #8B56B6;
-    border: 4px solid #5D5DFF;
+    background: #7e4ea5;
+    opacity: 0.9;
+    border: 4px solid #2ab971;
     flex-wrap: wrap;
+    z-index: 10;
+    position: relative;
 }
 
 /* Pixel Button */
@@ -158,32 +166,32 @@ nav {
 
 /* Night Mode */
 .night-mode {
-    background-color: #1A1A2E;
-    color: #A3A3FF;
+    background-color: #17173e;
+    color: #a2a2fd;
 }
 
 .night-mode a {
-    color: #A3A3FF;
+    color: #a2a2fd;
 }
 
 .night-mode .pixel-button {
-    background-color: #1A1A2E;
-    color: #A3A3FF;
-    border-color: #A3A3FF;
+    background-color: #17173e;
+    color: #a2a2fd;
+    border-color: #a2a2fd;
 }
 
 .night-mode .pixel-button:hover {
-    background-color: #2E2E5E;
-    color: #E6E6FA;
+    background-color: #17173e;
+    color: #c4c4fc;
 }
 
 .night-mode section {
-    background-color: #4B4B86;
+    background-color: #4646c0;
 }
 
 .night-mode nav {
-    background-color: #572b7a;
-    border-color: #A3A3FF;
+    background-color: #694188;
+    border-color: #a8e2c4;
 }
 
 /* Additional smooth fade effect */
@@ -200,56 +208,73 @@ nav {
     left: 0;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    overflow: visible; /* Prevents the clouds from getting cut */
     pointer-events: none;
+
 }
 
 /* Cloud Styling */
 .cloud {
     position: absolute;
     width: 150px; /* Adjust size as needed */
-    opacity: 0.8;
-    animation: moveClouds 30s linear infinite;
+    image-rendering: pixelated;
+    opacity: 0.9;
+    animation: moveClouds 50s linear infinite;
+    z-index: 1; /* Lower layer */
+}
+
+.night-mode .cloud {
+    position: absolute;
+    width: 150px; /* Adjust size as needed */
+    image-rendering: pixelated;
+    opacity: 0.5;
+    animation: moveClouds 50s linear infinite;
+    z-index: 1; /* Lower layer */
 }
 
 /* Position each cloud differently */
 .cloud1 {
     top: 10%;
     left: -200px;
-    animation-duration: 25s;
+    animation-duration: 50s;
 }
 
 .cloud2 {
     top: 50%;
     left: -250px;
-    animation-duration: 35s;
+    animation-duration: 50s;
 }
 
 .cloud3 {
     top: 80%;
     left: -300px;
-    animation-duration: 40s;
+    animation-duration: 50s;
 }
 
 /* Position each cloud differently */
 .cloud4 {
     top: 20%;
     left: -600px;
-    animation-duration: 25s;
+    animation-duration: 50s;
 }
 
 .cloud5 {
     top: 65%;
     left: -850px;
-    animation-duration: 35s;
+    animation-duration: 50s;
 }
 
-/* Cloud Animation */
 @keyframes moveClouds {
     from {
-        transform: translateX(-200px);
+        transform: translateX(108vw); /* Start off-screen */
     }
     to {
-        transform: translateX(100vw);
+        transform: translateX(-50px); /* Moves fully off-screen */
     }
+}
+
+.cloud {
+    position: absolute;
+    top: 50px; /* Adjust as needed */
+    animation: moveClouds 20s linear infinite;
 }
