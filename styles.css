@@ -99,6 +99,10 @@ a:hover {
     color: #2E6BB1;
 }
 
+.night-mode #contact a {
+    color: #3286e6
+} 
+
 /* Navigation Bar */
 nav {
     display: flex;
@@ -174,13 +178,13 @@ nav {
     color: #a2a2fd;
 }
 
-.night-mode .pixel-button {
+.night-mode .pixel-button, #mode-toggle {
     background-color: #17173e;
     color: #a2a2fd;
     border-color: #a2a2fd;
 }
 
-.night-mode .pixel-button:hover {
+.night-mode .pixel-button:hover, #mode-toggle:hover {
     background-color: #17173e;
     color: #c4c4fc;
 }
@@ -195,7 +199,7 @@ nav {
 }
 
 /* Additional smooth fade effect */
-.transition-mode body, section, .pixel-button, nav {
+.transition-mode body, section, .pixel-button, nav, #mode-toggle, :hover, :active {
     transition: background-color 2s ease, color 2s ease, border-color 2s ease;
 }
 
