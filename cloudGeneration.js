@@ -19,8 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
         cloudContainer.appendChild(cloud);
 
         // Remove the cloud only after it has fully completed its animation
-        setTimeout(() => cloud.remove(), animationDuration * 10000);
+        if (cloud.style.left > 0) {
+            return
+        } else {
+            setTimeout(() => cloud.remove(), animationDuration * 10000);
+        }
     }
-
     setInterval(createCloud, 3000); // Generate a cloud every 3 seconds
 });
