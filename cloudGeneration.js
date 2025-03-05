@@ -6,24 +6,21 @@ document.addEventListener("DOMContentLoaded", () => {
         cloud.src = `Images/cloud_${Math.floor(Math.random() * 5)}.png`;
         cloud.classList.add("cloud");
 
-        // Randomize size and position
-        const size = Math.random() * 100 + 100; // Between 100px and 200px
+        const size = Math.random() * 100 + 100;
         cloud.style.width = `${size}px`;
-        cloud.style.top = `${Math.random() * 80}vh`; // Random vertical position
-        cloud.style.left = `-${size - 20}px`; // Start off-screen
-
+        cloud.style.top = `${Math.random() * 100}%`;
+        cloud.style.left = `-${size - 20}px`;
         // Random animation duration between 20-40s
         const animationDuration = Math.random() * 20 + 20;
         cloud.style.animationDuration = `${animationDuration}s`;
 
         cloudContainer.appendChild(cloud);
 
-        // Remove the cloud only after it has fully completed its animation
         if (cloud.style.left > 0) {
             return
         } else {
             setTimeout(() => cloud.remove(), animationDuration * 10000);
         }
     }
-    setInterval(createCloud, 3000); // Generate a cloud every 3 seconds
+    setInterval(createCloud, 3000);
 });

@@ -76,7 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Star Generation
     function generateStars() {
         const starCount = Math.floor(Math.random() * 50) + 50; // 50-100 stars
         const nightSky = document.createElement("div");
@@ -89,16 +88,16 @@ document.addEventListener("DOMContentLoaded", () => {
             star.classList.add("star");
     
             const xPos = Math.random() * window.innerWidth;
-            const yPos = Math.random() * window.innerHeight * 0.8; // Avoid bottom area
-            const size = Math.random() * 3 + 1; // Random size (1px - 4px)
-            const twinkleDuration = Math.random() * 3 + 2; // 2s - 5s twinkle
+            const yPos = Math.random() * window.innerHeight * 1.0;
+            const size = Math.random() * 3 + 1;
+            const twinkleDuration = Math.random() * 3 + 2;
             const randomColor = starColors[Math.floor(Math.random() * starColors.length)];
     
             star.style.left = `${xPos}px`;
             star.style.top = `${yPos}px`;
             star.style.width = `${size}px`;
             star.style.height = `${size}px`;
-            star.style.backgroundColor = randomColor; // Assign random color
+            star.style.backgroundColor = randomColor;
             star.style.animation = `twinkle ${twinkleDuration}s infinite alternate`;
     
             nightSky.appendChild(star);
@@ -115,10 +114,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Run check every 5 minutes
     setInterval(checkTimeForAdaptiveMode, 1 * 10 * 1000);
 
-    // Load initial mode
     applyMode(currentMode);
 
     modeSwitch.addEventListener("click", toggleMode);

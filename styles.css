@@ -1,9 +1,7 @@
-/* General Styles */
 body {
     background-color: #6f6fff;
     /* background-image: url('path-to-your-gif.gif'); */
     background-size: cover;
-    background-position: center;
     background-repeat: repeat;
     color: #2c2c78;
     font-family: 'Press Start 2P', cursive;
@@ -12,9 +10,9 @@ body {
     transition: background-color 2s ease-in-out, color 2s ease-in-out;
     z-index: 10;
     position: relative;
+    overflow: hidden;
 }
 
-/* Main Container */
 .game-container {
     width: 100%;
     height: 100%;
@@ -26,7 +24,6 @@ body {
     padding-top: 20px;
 }
 
-/* Header */
 header h1 {
     font-size: 3rem;
     color: #8B56B6;
@@ -42,7 +39,6 @@ header .intro {
     position: relative;
 }
 
-/* Sections */
 section {
     background: #a2a2fd;
     border-radius: 10px;
@@ -53,12 +49,10 @@ section {
     opacity: 0.7;
 }
 
-/* Shared Section Headers */
 section h1 {
     font-size: 2rem;
 }
 
-/* Skills */
 #skills ul {
     list-style: none;
     padding: 0;
@@ -69,7 +63,6 @@ section h1 {
     padding-top: 5px;
 }
 
-/* Projects */
 .project {
     margin-bottom: 15px;
 }
@@ -84,7 +77,6 @@ section h1 {
     font-weight: bold;
 }
 
-/* Links */
 a {
     text-decoration: underline;
 }
@@ -94,7 +86,6 @@ a:hover {
     transition: color 0.3s ease;
 }
 
-/* Contact */
 #contact a {
     color: #2E6BB1;
 }
@@ -103,7 +94,6 @@ a:hover {
     color: #3286e6
 } 
 
-/* Navigation Bar */
 nav {
     display: flex;
     justify-content: center;
@@ -117,7 +107,6 @@ nav {
     position: relative;
 }
 
-/* Pixel Button */
 .pixel-button {
     font-family: 'Press Start 2P', cursive;
     background-color: #E6E6FA;
@@ -143,7 +132,6 @@ nav {
     transform: translate(4px, 4px);
 }
 
-/* Night Mode Toggle Button */
 #mode-toggle {
     position: fixed;
     top: 20px;
@@ -154,7 +142,7 @@ nav {
     border: 4px solid #5D5DFF;
     font-family: 'Press Start 2P', cursive;
     box-shadow: 4px 4px 6px #4B4B86;
-    z-index: 1000; /* Make sure it stays above other elements */
+    z-index: 1000;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -171,7 +159,6 @@ nav {
 }
 
 
-/* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2.5rem;
@@ -196,7 +183,6 @@ nav {
     }
 }
 
-/* Night Mode */
 .night-mode {
     background-color: #17173e;
     color: #a2a2fd;
@@ -226,7 +212,6 @@ nav {
     border-color: #a8e2c4;
 }
 
-/* Additional smooth fade effect */
 .transition-mode body, section, .pixel-button, nav, #mode-toggle, :hover, :active {
     transition: background-color 2s ease, color 2s ease, border-color 2s ease;
 }
@@ -240,31 +225,29 @@ nav {
     left: 0;
     width: 100vw;
     height: 100vh;
-    overflow: visible; /* Prevents the clouds from getting cut */
+    overflow: visible;
     pointer-events: none;
 
 }
 
-/* Cloud Styling */
 .cloud {
     position: absolute;
-    width: 150px; /* Adjust size as needed */
+    width: 150px;
     image-rendering: pixelated;
     opacity: 0.9;
     animation: moveClouds 50s linear infinite;
-    z-index: 1; /* Lower layer */
+    z-index: 1;
 }
 
 .night-mode .cloud {
     position: absolute;
-    width: 150px; /* Adjust size as needed */
+    width: 150px;
     image-rendering: pixelated;
     opacity: 0.5;
     animation: moveClouds 50s linear infinite;
-    z-index: 1; /* Lower layer */
+    z-index: 1;
 }
 
-/* Position each cloud differently */
 .cloud1 {
     top: 10%;
     left: -200px;
@@ -283,7 +266,6 @@ nav {
     animation-duration: 50s;
 }
 
-/* Position each cloud differently */
 .cloud4 {
     top: 20%;
     left: -600px;
@@ -298,16 +280,16 @@ nav {
 
 @keyframes moveClouds {
     from {
-        transform: translateX(108vw); /* Start off-screen */
+        transform: translateX(108vw);
     }
     to {
-        transform: translateX(-50px); /* Moves fully off-screen */
+        transform: translateX(-50px);
     }
 }
 
 .cloud {
     position: absolute;
-    top: 50px; /* Adjust as needed */
+    top: 50px;
     animation: moveClouds 20s linear infinite;
 }
 
@@ -317,23 +299,29 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* So users can interact normally */
+    pointer-events: none;
     overflow: hidden;
 }
 
 .star {
     position: absolute;
-    width: 3px; /* Make it a small pixel */
+    width: 3px;
     height: 3px;
     background-color: white;
-    image-rendering: pixelated; /* Ensures pixel-like rendering */
+    image-rendering: pixelated;
+    z-index: 0;
     
-    /* Optional: Twinkle effect */
     animation: twinkle 3s infinite alternate;
 }
 
-/* Pixelated twinkle effect */
 @keyframes twinkle {
     0% { opacity: 1; }
     100% { opacity: 0.3; }
+}
+
+.platform {
+    width: 150px;
+    image-rendering: pixelated;
+    position: fixed;
+    z-index: 10;
 }
