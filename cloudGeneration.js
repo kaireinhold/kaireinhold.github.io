@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const size = Math.random() * 100 + 100; // Between 100px and 200px
         cloud.style.width = `${size}px`;
         cloud.style.top = `${Math.random() * 80}vh`; // Random vertical position
-        cloud.style.left = `-${size + 20}px`; // Start off-screen
+        cloud.style.left = `-${size + 30}px`; // Start off-screen
 
         // Random animation duration between 20-40s
         const animationDuration = Math.random() * 20 + 20;
