@@ -44,11 +44,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function updateButtonText(mode) {
         if (mode === MODES.NIGHT) {
-            modeSwitch.textContent = "Mode: Night 🌙";
+            modeSwitch.textContent = "Mode: Night";
         } else if (mode === MODES.DAY) {
-            modeSwitch.textContent = "Mode: Day ☀";
+            modeSwitch.textContent = "Mode: Day";
         } else {
-            modeSwitch.textContent = "Mode: Adaptive ⏳";
+            modeSwitch.textContent = "Mode: Adaptive";
         }
     }
 
