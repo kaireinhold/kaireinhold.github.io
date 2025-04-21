@@ -150,11 +150,7 @@ nav {
     z-index: 1000;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
     margin-top: 80px; /* Push it below the navbar */
-    text-align: center;
     display: block;
     position: relative;
     text-align: center;
