@@ -9,7 +9,19 @@
         <script src="nightMode.js"></script>
         <script src="cloudGeneration.js"></script>
     </head>
+    <script>
+        function adjustModeButtonPosition() {
+            const navbar = document.querySelector("nav");
+            const modeToggle = document.querySelector("#mode-toggle");
+            if (navbar && modeToggle) {
+                const navHeight = navbar.offsetHeight;
+                modeToggle.style.marginTop = navHeight + 20 + "px"; // adds some spacing
+            }
+        }
 
+        window.addEventListener("load", adjustModeButtonPosition);
+        window.addEventListener("resize", adjustModeButtonPosition);
+    </script>
     <body>
         <nav>
             <a href="index.html" class="pixel-button">Home</a>
