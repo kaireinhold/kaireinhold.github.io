@@ -23,13 +23,22 @@
         window.addEventListener("resize", adjustModeButtonPosition);
     </script>
     <body>
-        <nav>            
-            <a href="index.html" class="pixel-button">Home</a>
-            <a href="profile.html" class="pixel-button">Profile</a>
-            <a href="skills.html" class="pixel-button">Skills</a>
-            <a href="projects.html" class="pixel-button">Projects</a>
-            <a href="contact.html" class="pixel-button">Contact</a>
-        </nav>   
+        <nav class="navbar">
+            <button class="toggle-btn" onclick="toggleNavbar()">☰ Menu</button>
+            <div class="nav-links" id="navLinks">            
+                <a href="index.html" class="pixel-button">Home</a>
+                <a href="profile.html" class="pixel-button">Profile</a>
+                <a href="skills.html" class="pixel-button">Skills</a>
+                <a href="projects.html" class="pixel-button">Projects</a>
+                <a href="contact.html" class="pixel-button">Contact</a>
+            </div>
+        </nav>
+        <script>
+            function toggleNavbar() {
+                document.getElementById('navLinks').classList.toggle('show');
+            }
+        </script>
+          
         <div class="cloud-container"></div>
 
         <img src="Images/Error.png" width="100px" height="100px" alt="An image of this website's mascot, a living TV named Bit, with his antennas bent out of shape and his screen displaying a classic TV error screen. His eyes are replaced with two X symbols." style="display: block; margin-left: auto; margin-right: auto; padding: 10px;">

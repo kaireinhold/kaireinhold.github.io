@@ -1,3 +1,59 @@
+.navbar {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        background: #b18ccd;
+        opacity: 0.9;
+        border: 4px solid #1a7346;
+        flex-wrap: wrap;
+        position: fixed;
+        top: 10px;
+        width: auto;
+        z-index: 100;
+        
+    }
+
+.toggle-btn {
+    background: midnightblue;
+    color: rgb(191, 180, 253);
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.night-mode .toggle-btn {
+    background: rgb(98, 98, 235);
+    color: rgb(13, 13, 51);
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+.nav-links {
+    display: none;
+    flex-direction: column;
+}
+
+.nav-links a {
+    text-decoration: underline;
+}
+
+.nav-links a:hover {
+    color: #8b56b6 !important;
+    transition: color 0.3s ease;
+}
+
+.nav-links.show {
+    display: flex;
+}
+
+
+
 body {
     padding-top: 100px;
     background-color: #6f6fff;
@@ -96,7 +152,7 @@ a:hover {
     color: #3286e6
 } 
 
-nav {
+/* nav {
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -110,7 +166,7 @@ nav {
     top: 10px;
     width: 100%;
     z-index: 100;
-}
+} */
 
 .pixel-button {
     font-family: 'Press Start 2P', cursive;
@@ -123,6 +179,7 @@ nav {
     transition: all 0.1s ease-in-out !important;
     white-space: nowrap;
     text-align: center;
+    margin: 5px
 }
 
 .pixel-button:hover {
@@ -178,10 +235,10 @@ nav {
         margin: 10px;
     }
 
-    nav {
+    /* nav {
         flex-direction: column;
         align-items: center;
-    }
+    } */
 
     .pixel-button {
         width: 80%;
@@ -241,6 +298,7 @@ nav {
 
 .cloud {
     position: absolute;
+    top: 0;
     width: 150px;
     image-rendering: pixelated;
     opacity: 0.9;
@@ -250,6 +308,7 @@ nav {
 
 .night-mode .cloud {
     position: absolute;
+    top: 0;
     width: 150px;
     image-rendering: pixelated;
     opacity: 0.5;
